@@ -9,7 +9,7 @@
                 <x-input id="clubname" type="text" name="clubname" :value="old('clubname')" required autofocus/>
             </div>
             <div>
-                <x-label for="name">{{ __('Name') }} <span class="text-rose-500">*</span></x-label>
+                <x-label for="name">{{ __('First name') }} <span class="text-rose-500">*</span></x-label>
                 <x-input id="name" type="text" name="name" :value="old('name')" required autocomplete="name" />
             </div>
 

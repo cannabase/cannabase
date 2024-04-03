@@ -44,7 +44,7 @@
                             <div class="flex items-center justify-center px-4 sm:px-6 lg:px-8">
                                 <!-- Logo -->
                                 <a class="block" href="{{ route('dashboard') }}">
-                                    <img class="h-1/2" src="{{ asset('images/logo_web.png') }}">
+                                    <img class="lg:h-48 h-1/2" src="{{ asset('images/logo_web.png') }}">
                                 </a>
                             </div>
                         </div>

@@ -62,6 +62,7 @@
     "Click to copy": "Klicken Sie zum Kopieren",
     "Client Closed Request": "Client-Closed-Request",
     "Close": "Schließen",
+    "Club Name": "Clubname",
     "Coaches": "Trainer",
     "Coaching": "Coachinghinweise",
     "Code": "Code",
@@ -150,6 +151,7 @@
     "File": "Datei",
     "Files": "Dateien",
     "Finish enabling two factor authentication.": "Aktivierung der Zwei-Faktor-Authentifizierung abschließen.",
+    "First name": "Vorname",
     "Focus": "Fokus",
     "For your security, please confirm your password to continue.": "Um fortzufahren, bestätigen Sie zu Ihrer Sicherheit bitte Ihr Passwort.",
     "Forbidden": "Verboten",
@@ -449,4 +451,5 @@
     "You may not leave a team that you created.": "Sie können ein von Ihnen erstelltes Team nicht verlassen.",
     "You need to create Players in the \"Players\" tab.": "Du musst Spieler im \"Spieler\" Tab hinzufügen.",
     "Your email address is unverified.": "Ihre E-Mail-Adresse ist nicht verifiziert."
+
 }
