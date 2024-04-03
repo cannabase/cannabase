@@ -7,7 +7,7 @@
             <!-- Right: Actions -->
             <div class="grid grid-flow-col justify-end gap-2">
                 <!-- Datepicker built with flatpickr -->
-                <x-datepicker />
+                <!-- <x-datepicker />-->
             </div>
         </div>
         <!-- Cards -->

@@ -1,0 +1,42 @@
+# fly.toml app configuration file generated for cannabase on 2024-04-03T23:51:41+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'cannabase'
+primary_region = 'cdg'
+console_command = 'php /var/www/html/artisan tinker'
+
+[build]
+  [build.args]
+    NODE_VERSION = '18'
+    PHP_VERSION = '8.3'
+
+[deploy]
+  release_command = "php /var/www/html/artisan migrate --force"
+
+[env]
+  APP_NAME = 'cannabase'
+  APP_ENV = 'production'
+  APP_TIMEZONE = 'Europe/Berlin'
+  APP_URL = 'https://app.cannabase.club'
+  DB_CONNECTION = 'mysql'
+  LOG_CHANNEL = 'stderr'
+  LOG_LEVEL = 'info'
+  LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
+  SESSION_DRIVER = 'database'
+  SESSION_SECURE_COOKIE = 'true'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  max_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

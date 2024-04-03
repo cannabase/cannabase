@@ -10,6 +10,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.js',
+        "./node_modules/flowbite/**/*.js"
     ],
     darkMode: 'class',
     theme: {
@@ -71,5 +72,6 @@ export default {
                 modifySelectors(({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`);
             });
         }),
+        require('flowbite/plugin')
     ],
 };

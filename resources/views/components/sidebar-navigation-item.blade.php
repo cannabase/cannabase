@@ -1,5 +1,5 @@
-<li class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 bg-slate-900">
-    <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if(Route::is('dashboard')){{ '!text-indigo-500' }}@endif" href="{{ route('dashboard') }}">
+<li data-tooltip-target="tooltip-default-{{$route}}" data-tooltip-placement="bottom" class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 bg-green-600 @if(Route::is($route)){{ '!bg-green-800' }}@endif @if($disabled) {{ '!bg-gray-600' }} @endif">
+    <a class="block text-white hover:text-white truncate transition duration-150" @if(!$disabled) href="{{ route($route) }}" @endif >
         <div class="flex items-center justify-between">
             <div class="flex items-center">
                 <!-- ICON --><span></span>
@@ -8,3 +8,10 @@
         </div>
     </a>
 </li>
+
+@if($disabled)
+<div id="tooltip-default-{{$route}}" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+    Coming soon
+    <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+@endif

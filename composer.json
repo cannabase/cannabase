@@ -1,5 +1,5 @@
 {
-    "name": "canabase",
+    "name": "securid/cannabase",
     "type": "project",
     "description": "All-in-one SaaS solution for CSC in Germany.",
     "keywords": ["laravel", "framework"],

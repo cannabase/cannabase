@@ -10,7 +10,7 @@
     <!-- Sidebar -->
     <div
         id="sidebar"
-        class="flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out"
+        class="flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-white shadow-xl p-4 transition-all duration-200 ease-in-out"
         :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'"
         @click.outside="sidebarOpen = false"
         @keydown.escape.window="sidebarOpen = false"
@@ -18,7 +18,7 @@
     >
 
         <!-- Sidebar header -->
-        <div class="flex justify-between pr-3">
+        <div class="flex justify-between -mt-5">
             <!-- Close button -->
             <button class="lg:hidden text-slate-500 hover:text-slate-400" @click.stop="sidebarOpen = !sidebarOpen" aria-controls="sidebar" :aria-expanded="sidebarOpen">
                 <span class="sr-only">Close sidebar</span>
@@ -42,9 +42,8 @@
                 </h3>
                 <ul class="mt-3">
                     <x-sidebar-navigation-item route="dashboard">Dashboard</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="members">Mitglieder</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="warehouse">Lager</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route=""></x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="members" disabled="true">Mitglieder</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="warehouse" disabled="true">Lager</x-sidebar-navigation-item>
                 </ul>
             </div>
             <!-- More group -->
@@ -54,8 +53,8 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Club Einstellungen</span>
                 </h3>
                 <ul class="mt-3">
-                    <x-sidebar-navigation-item route="dashboard">Allgemeine</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="members">Rollenverwaltung</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="club" disabled="true">Allgemein</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="roles" disabled="true">Rollenverwaltung</x-sidebar-navigation-item>
                 </ul>
             </div>
         </div>
