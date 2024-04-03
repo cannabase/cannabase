@@ -13,8 +13,8 @@ return new class extends Migration {
             $table->string('mail')->nullable();
             $table->string('website')->nullable();
             $table->string('logo')->nullable();
-            $table->integer('status');
-            $table->boolean('plus');
+            $table->integer('status')->default(0);
+            $table->boolean('plus')->default(0);
             $table->timestamps();
         });
     }

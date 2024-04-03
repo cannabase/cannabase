@@ -22,7 +22,7 @@
             @if (Route::has('password.request'))
                 <div class="mr-1">
                     <a class="text-sm underline hover:no-underline" href="{{ route('password.request') }}">
-                        {{ __('Forgot Password?') }}
+                        {{ __('Forgot your password?') }}
                     </a>
                 </div>
             @endif
@@ -35,7 +35,7 @@
     <!-- Footer -->
     <div class="pt-5 mt-6 border-t border-slate-200 dark:border-slate-700">
         <div class="text-sm">
-            {{ __('Don\'t you have an account?') }} <a class="font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+            {{ __('Don\'t you have an account?') }} <a class="font-medium text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400" href="{{ route('register') }}">{{ __('Sign up') }}</a>
         </div>
     </div>
 </x-authentication-layout>
