@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataFeedController;
+use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/login');
@@ -14,9 +15,7 @@ Route::middleware([
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
-    Route::get('/members', function() {
-        return view('pages/members/index');
-    })->name('members');
+    Route::get('/members', [MemberController::class, 'index'])->name('member');
 
     Route::get('/warehouse', function () {
         return view('pages/warehouse/index');
