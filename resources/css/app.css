@@ -1,5 +1,6 @@
 @import 'additional-styles/flatpickr.css';
 @import 'additional-styles/utility-patterns.css';
+@import 'bootstrap-icons';
 
 @tailwind base;
 @tailwind components;

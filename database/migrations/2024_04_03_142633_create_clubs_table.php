@@ -10,11 +10,12 @@ return new class extends Migration {
         Schema::create('clubs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('mail')->nullable();
+            $table->string('email')->nullable();
             $table->string('website')->nullable();
             $table->string('logo')->nullable();
             $table->integer('status')->default(0);
             $table->boolean('plus')->default(0);
+            $table->string('profile_photo_path')->nullable();
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClubController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataFeedController;
 use App\Http\Controllers\MemberController;
@@ -15,15 +16,13 @@ Route::middleware([
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/json-data-feed', [DataFeedController::class, 'getDataFeed'])->name('json_data_feed');
 
-    Route::get('/members', [MemberController::class, 'index'])->name('member');
+    Route::get('/members', [MemberController::class, 'index'])->name('members');
+
+    Route::get('/club', [ClubController::class, 'index'])->name('club');
 
     Route::get('/warehouse', function () {
         return view('pages/warehouse/index');
     })->name('warehouse');
-
-    Route::get('/club', function () {
-        return view('pages/club/index');
-    })->name('club');
 
     Route::get('/roles', function () {
         return view('pages/roles/index');

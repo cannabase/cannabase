@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Club;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Club::factory(1)->create();
 
         User::factory()->create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'test@test.com',
+            'password' => bcrypt('Test1234'),
+            'club_id' => 1,
+        ]);
+
+        User::factory(25)->create([
+            'club_id' => 1
         ]);
     }
 }

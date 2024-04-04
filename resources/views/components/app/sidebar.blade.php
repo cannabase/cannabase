@@ -41,9 +41,9 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Dein Club</span>
                 </h3>
                 <ul class="mt-3">
-                    <x-sidebar-navigation-item route="dashboard">Dashboard</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="members" disabled="true">Mitglieder</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="warehouse" disabled="true">Lager</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="dashboard" icon="speedometer">Dashboard</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="members" icon="people">Mitglieder</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="warehouse" icon="boxes" disabled="true">Lager</x-sidebar-navigation-item>
                 </ul>
             </div>
             <!-- More group -->
@@ -53,8 +53,8 @@
                     <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Club Einstellungen</span>
                 </h3>
                 <ul class="mt-3">
-                    <x-sidebar-navigation-item route="club" disabled="true">Allgemein</x-sidebar-navigation-item>
-                    <x-sidebar-navigation-item route="roles" disabled="true">Rollenverwaltung</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="club" icon="gear">Allgemein</x-sidebar-navigation-item>
+                    <x-sidebar-navigation-item route="roles" icon="person-gear" disabled="true">Rollenverwaltung</x-sidebar-navigation-item>
                 </ul>
             </div>
         </div>

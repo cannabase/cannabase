@@ -11,7 +11,7 @@ class SidebarNavigationItem extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $route, public bool $disabled = false)
+    public function __construct(public string $route, public string $icon, public bool $disabled = false)
     {
 
     }

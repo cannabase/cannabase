@@ -4,26 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Club;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClubController extends Controller
 {
     public function index()
     {
-        return Club::all();
-    }
-
-    public function store(Request $request)
-    {
-        $data = $request->validate([
-            'name' => ['required'],
-            'mail' => ['nullable'],
-            'website' => ['nullable'],
-            'logo' => ['nullable'],
-            'status' => ['required', 'integer'],
-            'plus' => ['boolean'],
-        ]);
-
-        return Club::create($data);
+        $clubId = Auth::user()->club_id;
+        $club = Club::find($clubId);
+        return view('pages.club.index', ['club' => $club]);
     }
 
     public function show(Club $club)
@@ -45,12 +34,5 @@ class ClubController extends Controller
         $club->update($data);
 
         return $club;
-    }
-
-    public function destroy(Club $club)
-    {
-        $club->delete();
-
-        return response()->json();
     }
 }

@@ -16,7 +16,7 @@ class ClubFactory extends Factory
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
             'name' => $this->faker->name(),
-            'mail' => $this->faker->word(),
+            'email' => $this->faker->word(),
             'website' => $this->faker->word(),
             'logo' => $this->faker->word(),
             'status' => $this->faker->randomNumber(),
