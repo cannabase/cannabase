@@ -16,7 +16,7 @@
 
             <x-section-border />
             <div class="mt-10 sm:mt-0">
-                <!-- ADDRESS MANAGEMENT -->
+                @livewire('update-club-address-form')
             </div>
 
             <x-section-border />

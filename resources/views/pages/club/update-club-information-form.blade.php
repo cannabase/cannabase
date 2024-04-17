@@ -32,13 +32,14 @@
         <!-- Status -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="status" value="{{ __('Status') }}" />
-            <select id="status" class="border border-black text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select id="status" wire:model="status" class="border border-black text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="0">{{ __('Idea') }}</option>
                 <option value="1">{{ __('Preparation') }}</option>
                 <option value="2">{{ __('In Founding') }}</option>
                 <option value="3">{{ __('Founded') }}</option>
                 <option value="4">{{ __('Approved') }}</option>
             </select>
+            <x-input-error for="status" class="mt-2" />
         </div>
     </x-slot>
 

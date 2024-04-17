@@ -4,9 +4,7 @@ namespace App\Livewire;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
-use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 use Livewire\Component;
-use Livewire\WithFileUploads;
 
 class UpdateClubInformationForm extends Component
 {
@@ -35,15 +33,21 @@ class UpdateClubInformationForm extends Component
 
     public function updateClubInformation()
     {
-        $this->validate();
-
-        $this->club->update([
-            'name' => $this->club->name,
+        $this->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'website' => 'nullable|url',
+            'status' => 'required|integer',
         ]);
 
-        session()->flash('message', 'Club information updated successfully.');
+        // update club
+        $this->club->name = $this->name;
+        $this->club->email = $this->email;
+        $this->club->website = $this->website;
+        $this->club->status = $this->status;
+        $this->club->save();
 
-        return redirect()->route('club.show', $this->club);
+        $this->dispatch('saved');
     }
 
     /**
