@@ -4,6 +4,11 @@
 
 Cannabase is an open source software specifically designed for german Cannabis Social Clubs.
 
+
+## Discord
+
+Join our discord server for discussions and collaboration:
+[Join](https://discord.gg/GyTnym2TZj)
 ## License
 
 The Laravel framework is open-sourced software licensed under the [GNU v3 License](https://opensource.org/license/gpl-3-0).
