@@ -14,6 +14,7 @@ class AuthenticationTest extends TestCase
     {
         $response = $this->get('/login');
 
+        dd($response->getContent());
         $response->assertStatus(200);
     }
 
