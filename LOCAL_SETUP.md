@@ -1,6 +1,6 @@
 # Local setup guide
 
-## Using Docker
+## Using Docker (Recommended)
 
 1. Clone the Git repository to your local computer (GitHub Desktop, GitKraken)
 2. Run the following command in your CLI:
