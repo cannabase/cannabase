@@ -16,6 +16,7 @@
 8. You should now be able to access your local environment on **http://localhost:8080**
 9. Just register yourself an account and a new club
 
+For more information have a look at the official [Laravel Sail Docs](https://laravel.com/docs/11.x/sail)
 
 ## Using XAMPP (Windows without WSL2)
 
